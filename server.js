@@ -85,9 +85,10 @@ var articles = {
                 <p> This is article three</p>`,
     },
 };
-app.get('/article-one', function (req, res) {
+app.get('/:articleOne', function (req, res) {
  //   var articleName = req.params.articleName; 
-    res.send(createTemplate(articleOne));
+    var articleOnee = req.params.articleOne;
+    res.send(createTemplate(articleOnee));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
