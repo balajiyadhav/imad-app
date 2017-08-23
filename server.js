@@ -21,25 +21,22 @@ var articleOne = {
             <p> This is article two</p>
             <p> This is article two</p>`,
 };
-function createTemplate(data){
-    var title = data.title;
-    var date = data.date;
-    var heading = data.heading;
-    var conent = data.content;
+function createTemplate(){
+    
     var htmlTemplate = `
     <html>
         <head>
-            <title>${title}</title>
+            <title>Title</title>
         
         <link href="/ui/style.css" rel="stylesheet"/>
         </head>
         <body>
             <div class = "container">
             <div><a href="/">Home</a></div>
-            <div><h1>${heading}</h1></div>
-        <div>${date}</div>
+            <div><h1>heading</h1></div>
+        <div>Aug 23 2017</div>
         <div>
-        ${content}
+        content
         </div>
         </body>
     </html>`;
@@ -87,7 +84,7 @@ var articles = {
 };
 app.get('/article-one', function (req, res) {
  //   var articleName = req.params.articleName; 
-    res.send(createTemplate(articleOne));
+    res.send(createTemplate());
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
