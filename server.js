@@ -45,6 +45,16 @@ function createTemplate(data){
     </html>`;
     return htmlTemplate;
 }
+var articleOne = {
+        title: 'Article One | Balaji S',
+        heading: 'Article One',
+        date:'Aug 22 2017',
+        content:` <p> This is article one</p>
+            <p> This is article one</p>
+            <p> This is article one</p>
+            <p> This is article one</p>`,
+        
+        };
 var articles = {
     'article-one':{
         title: 'Article One | Balaji S',
@@ -75,9 +85,9 @@ var articles = {
                 <p> This is article three</p>`,
     },
 };
-app.get('/:articleName', function (req, res) {
-    var articleName = req.params.articleName; 
-    res.send(createTemplate(articles[articleName]));
+app.get('/article-one', function (req, res) {
+ //   var articleName = req.params.articleName; 
+    res.send(createTemplate(articleOne));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
