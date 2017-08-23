@@ -40,8 +40,9 @@ function createTemplate(data){
         <div>${date}</div>
         <div>
         ${content}
-        </div>
+        
         </body>
+        </div>
     </html>`;
     return htmlTemplate;
 }
