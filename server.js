@@ -29,15 +29,15 @@ function createTemplate(data){
     var htmlTemplate = `
     <html>
         <head>
-            <title>Title</title>
+            <title>${title}</title>
         
         <link href="/ui/style.css" rel="stylesheet"/>
         </head>
         <body>
             <div class = "container">
             <div><a href="/">Home</a></div>
-            <div><h1>heading</h1></div>
-        <div>Aug 23 2017</div>
+            <div><h1>${heading}</h1></div>
+        <div>${date}</div>
         <div>
         ${content}
         </div>
