@@ -21,8 +21,8 @@ var articleOne = {
             <p> This is article two</p>
             <p> This is article two</p>`,
 };
-function createTemplate(){
-    var content = 'New content'
+function createTemplate(data){
+    var content = data.content;
     var htmlTemplate = `
     <html>
         <head>
@@ -84,7 +84,7 @@ var articles = {
 };
 app.get('/article-one', function (req, res) {
  //   var articleName = req.params.articleName; 
-    res.send(createTemplate());
+    res.send(createTemplate(articleOne));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
