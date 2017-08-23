@@ -22,7 +22,7 @@ var articleOne = {
             <p> This is article two</p>`,
 };
 function createTemplate(){
-    
+    var content = 'New content'
     var htmlTemplate = `
     <html>
         <head>
@@ -36,7 +36,7 @@ function createTemplate(){
             <div><h1>heading</h1></div>
         <div>Aug 23 2017</div>
         <div>
-        content
+        ${content}
         </div>
         </body>
     </html>`;
