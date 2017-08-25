@@ -17,6 +17,6 @@ button.onclick = function(){
         }
     }
     //render in correct span
-   request.open('GET','balajiyadhav0.imad.hasura-app.io/counter',true);
+   request.open('GET','/counter',true);
    request.send(null);
 }
