@@ -1,14 +1,11 @@
+//counter
 console.log('Loaded!');
-var element = document.getElementById("main-text");
-element.innerHTML = 'HI I am balaji aka 7r0nr007';
-var img = document.getElementById("madi");
-var marginLeft = 0;
-function moveRight(){
-    marginLeft = marginLeft + 1;
-    img.style.marginLeft = marginLeft+"px";
-}
-img.onclick = function(){
-    console.log('clicked')
-    var interval = setInterval(moveRight,50);
-    
+var counter = 0;
+var button = document.getElementById('counter');
+button.onclick = function(){
+    //Make a req to counter endpoint
+    //get response in variable
+    //render in correct span
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString()
 }
