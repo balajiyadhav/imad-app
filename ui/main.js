@@ -9,6 +9,7 @@ button.onclick = function(){
     //get response in variable
     request.onreadystatechange = function(){
         if(request.readyState == XMLHttpRequest.DONE){
+            console.log('1st if');
             if(request.status == 200){
                 var counter = request.responsetext;
                 var span = document.getElementById('count');
