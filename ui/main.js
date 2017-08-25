@@ -12,10 +12,10 @@ button.onclick = function(){
             console.log('1st if');
             if(request.status == 200){
                 //console.log('2nd if');
-                var counter = request.responsetext;
+                var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
-                console.log(request.responsetext.toString());
+                console.log(request.responseText.toString());
             }
         }
     }
