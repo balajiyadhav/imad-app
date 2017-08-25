@@ -11,10 +11,11 @@ button.onclick = function(){
         if(request.readyState == XMLHttpRequest.DONE){
             console.log('1st if');
             if(request.status == 200){
+                console.log('2nd if');
                 var counter = request.responsetext;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
-                console.log('counter');
+                console.log('2nd if');
             }
         }
     }
