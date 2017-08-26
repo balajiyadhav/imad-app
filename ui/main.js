@@ -20,20 +20,38 @@ button.onclick = function(){
     //render in correct span
    request.open('GET','/counter',true);
    request.send(null);
-}
+};
 // for name list
 var nameInput = document.getElementById('name');
 var name1 = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //displaying name list
-    var names = ['name1','name2','name3','name4'];
-    var list = '';
-    console.log(names.length);
-    for(var i =0; i < names.length; i++){
-        list += '<li>'+names[i]+'</li>';
+     //Make a req to counter endpoint
+    var request = new XMLHttpRequest();
+    //get response in variable
+    request.onreadystatechange = function(){
+        if(request.readyState == XMLHttpRequest.DONE){
+            if(request.status == 200){
+                //console.log('2nd if');
+                var names = request.responseText;
+                names = JSON.parse(names);
+                var list = '';
+                console.log(names.length);
+                for(var i =0; i < names.length; i++){
+                    list += '<li>'+names[i]+'</li>';
+                }
+                console.log(list);
+                var ul = document.getElementById('namelist');
+                ul.innerHTML = list;
+                
+            }
+        }
     }
-    console.log(list);
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
+    //render in correct span
+    var nameInput = document.getElementById('name');
+    var name1 = nameInput.value;
+   request.open('GET','/submit-nae?name='+name1,true);
+   request.send(null);
+   
 }
