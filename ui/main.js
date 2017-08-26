@@ -51,7 +51,7 @@ submit.onclick = function(){
     //render in correct span
     var nameInput = document.getElementById('name');
     var name1 = nameInput.value;
-   request.open('GET','/submit-nae?name='+name1,true);
+   request.open('GET','/submit-name?name='+name1,true);
    request.send(null);
    
 }
