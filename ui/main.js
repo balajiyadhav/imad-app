@@ -56,8 +56,7 @@ submit.onclick = function(){
    
 }
 // for article one comments
-var a1nameInput = document.getElementById('a1name');
-var a1name1 = a1nameInput.value;
+
 var a1submit = document.getElementById('a1submit_btn');
 a1submit.onclick = function(){
     //displaying name list
@@ -83,9 +82,9 @@ a1submit.onclick = function(){
         }
     }
     //render in correct span
-    var nameInput = document.getElementById('a1name');
+    var a1nameInput = document.getElementById('a1name');
     var a1name1 = a1nameInput.value;
-   request.open('GET','/a1comment'+name1,true);
+   request.open('GET','/a1comment'+a1name1,true);
    request.send(null);
    
 }
