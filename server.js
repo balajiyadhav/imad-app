@@ -30,6 +30,7 @@ var articleOne = {
     title: 'Article One | Balaji S',
     heading: 'Article One',
     date:'Aug 22 2017',
+    id:'a1',
     content:` <p> This is article two</p>
             <p> This is article two</p>
             <p> This is article two</p>
@@ -55,6 +56,10 @@ function createTemplate(data){
         <div>
         ${content}
         </div>
+        <input type="text" id = "${id}name" placeholder="name">
+            </input>
+            <input type="submit" value="submit" id = "${id}submit_btn">
+            </input>
         </body>
 
     </html>`;
@@ -75,6 +80,7 @@ var articles = {
         title: 'Article One | Balaji S',
         heading: 'Article One',
         date:'Aug 22 2017',
+        id:'a1',
         content:` <p> This is article one</p>
             <p> This is article one</p>
             <p> This is article one</p>
@@ -85,6 +91,7 @@ var articles = {
         title: 'Article Two | Balaji S',
         heading: 'Article Two',
         date:'Aug 23 2017',
+        id:'a2',
         content:` <p> This is article two</p>
                 <p> This is article two</p>
                 <p> This is article two</p>
@@ -94,6 +101,7 @@ var articles = {
         title: 'Article Three | Balaji S',
         heading: 'Article Three',
         date:'Aug 24 2017',
+        id:'a3',
         content:` <p> This is article three</p>
                 <p> This is article three</p>
                 <p> This is article three</p>
