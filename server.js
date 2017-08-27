@@ -65,7 +65,7 @@ function createTemplate(data){
                 <li>1</li>
                 <li>2</li>
             </ul>
-            <script>
+            <script type="text/javascript">
             console.log('inline loaded');
             var submit = document.getElementById('a1submit_btn);
             submit.onclick = function(){
