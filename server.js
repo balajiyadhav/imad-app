@@ -29,6 +29,12 @@ app.get('/submit-name', function (req,res){
     names.push(name);
     res.send(JSON.stringify(names));
 })
+var comments=[];
+app.get('/commentsa1', function (req,res){
+    var comment = req.query.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+})
 var articleOne = {
     title: 'Article One | Balaji S',
     heading: 'Article One',
