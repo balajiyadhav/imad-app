@@ -8,8 +8,9 @@ submit.onclick = function(){
     //get response in variable
     request.onreadystatechange = function(){
         if(request.readyState == XMLHttpRequest.DONE){
+            console.log('1st if');
             if(request.status == 200){
-                //console.log('2nd if');
+                console.log('2nd if');
                 var comments = request.responseText;
                 comments = JSON.parse(comments);
                 var list = '';
