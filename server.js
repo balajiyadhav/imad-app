@@ -57,11 +57,11 @@ function createTemplate(data){
         <div>
         ${content}
         </div>
-        <input type="text" id = "${id}name" placeholder="name">
+        <input type="text" id = "a1name" placeholder="name">
             </input>
-            <input type="submit" value="submit" id = "${id}submit_btn">
+            <input type="submit" value="submit" id = "a1submit_btn">
             </input>
-        <ul id="${id}namelist">
+        <ul id="a1namelist">
                 <li>1</li>
                 <li>2</li>
             </ul>
