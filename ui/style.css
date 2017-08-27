@@ -30,8 +30,7 @@ body {
         
 .bottom {
     
-    display: inline-block;
-    height: 100%;
+   
     vertical-align: bottom;
-    width: 0px;
+   
 }
