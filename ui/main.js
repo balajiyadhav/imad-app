@@ -61,6 +61,7 @@ var a1submit = document.getElementById('a1submit_btn');
 a1submit.onclick = function(){
     //displaying name list
      //Make a req to counter endpoint
+     console.log('submit clicked');
     var request = new XMLHttpRequest();
     //get response in variable
     request.onreadystatechange = function(){
