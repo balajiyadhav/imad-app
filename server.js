@@ -66,6 +66,9 @@ function createTemplate(data){
         <div>
         ${content}
         </div>
+        <div class="bottom">
+        <h3>Comments</h3>
+        <hr/>
         <input type="text" id = "a1name" placeholder="name">
             </input>
         <input type="submit" value="submit" id = "a1submit_btn">
@@ -74,6 +77,7 @@ function createTemplate(data){
                 <li>1</li>
                 <li>2</li>
             </ul>
+            </div>
             <script type="text/javascript" src="/ui/articleone.js">
             </script>        
             
