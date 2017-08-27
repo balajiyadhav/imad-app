@@ -61,6 +61,10 @@ function createTemplate(data){
             </input>
             <input type="submit" value="submit" id = "${id}submit_btn">
             </input>
+        <ul id="${id}namelist">
+                <li>1</li>
+                <li>2</li>
+            </ul>
         </body>
 
     </html>`;
