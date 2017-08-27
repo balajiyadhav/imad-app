@@ -70,7 +70,7 @@ function createTemplate(data){
             </input>
         <input type="submit" value="submit" id = "a1submit_btn">
             </input>
-        <ul id="a1namelist">
+        <ul id="namelist">
                 <li>1</li>
                 <li>2</li>
             </ul>
