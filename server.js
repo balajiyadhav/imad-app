@@ -65,6 +65,11 @@ function createTemplate(data){
                 <li>1</li>
                 <li>2</li>
             </ul>
+            <script type="text/javascript">
+            var submit = document.getElementById('a1submit_btn);
+            submit.onclick = function(){
+                console.log('submit clicked');
+            };
             <script type="text/javascript" src="/ui/main.js">
             </script>
         </body>
