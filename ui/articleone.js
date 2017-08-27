@@ -9,6 +9,7 @@ submit.onclick = function(){
     request.onreadystatechange = function(){
         if(request.readyState == XMLHttpRequest.DONE){
             console.log('1st if');
+            console.log(request.status);
             if(request.status == 200){
                 console.log('2nd if');
                 var comments = request.responseText;
