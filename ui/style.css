@@ -26,4 +26,12 @@ body {
             color: maroon;
             font-family: sans-serif;
             padding-left:40px;
-        }
+}
+        
+.bottom {
+    
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+    width: 0px;
+}
