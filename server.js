@@ -40,6 +40,7 @@ function createTemplate(data){
     var content = data.content;
     var date = data.date;
     var title = data.title;
+    var id = data.id;
     var heading = data.heading;
     var htmlTemplate = `
     <html>
