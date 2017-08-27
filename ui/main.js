@@ -62,30 +62,7 @@ a1submit.onclick = function(){
     //displaying name list
      //Make a req to counter endpoint
      console.log('submit clicked');
-    var request = new XMLHttpRequest();
-    //get response in variable
-    request.onreadystatechange = function(){
-        if(request.readyState == XMLHttpRequest.DONE){
-            if(request.status == 200){
-                //console.log('2nd if');
-                var names = request.responseText;
-                names = JSON.parse(names);
-                var list = '';
-                console.log(names.length);
-                for(var i =0; i < names.length; i++){
-                    list += '<li>'+names[i]+'</li><hr/>';
-                }
-                console.log(list);
-                var ul = document.getElementById('a1namelist');
-                ul.innerHTML = list;
-                
-            }
-        }
-    }
+  
     //render in correct span
-    var a1nameInput = document.getElementById('a1name');
-    var a1name1 = a1nameInput.value;
-   request.open('GET','/a1comment'+a1name1,true);
-   request.send(null);
    
 }
