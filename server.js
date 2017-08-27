@@ -65,13 +65,13 @@ function createTemplate(data){
                 <li>1</li>
                 <li>2</li>
             </ul>
-            <script>
-            console.log('inline loaded')
+        <script>
+            console.log('inline loaded');
             var submit = document.getElementById('a1submit_btn);
             submit.onclick = function(){
                 console.log('submit clicked');
             };
-            </script>
+        </script>
             
         </body>
 
