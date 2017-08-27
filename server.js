@@ -69,7 +69,7 @@ function createTemplate(data){
             var submit = document.getElementById('a1submit_btn);
             submit.onclick = function(){
                 console.log('submit clicked');
-            };
+            };</script>
             <script type="text/javascript" src="/ui/main.js">
             </script>
         </body>
