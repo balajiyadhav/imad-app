@@ -53,16 +53,7 @@ app.get('/commenta1', function (req,res){
     comments.push(comment);
     res.send(JSON.stringify(comments));
 })
-var articleOne = {
-    title: 'Article One | Balaji S',
-    heading: 'Article One',
-    date:'Aug 22 2017',
-    id:'a1',
-    content:` <p> This is article two</p>
-            <p> This is article two</p>
-            <p> This is article two</p>
-            <p> This is article two</p>`,
-};
+
 function createTemplate(data){
     var content = data.content;
     var date = data.date;
