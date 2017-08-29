@@ -104,49 +104,7 @@ function createTemplate(data){
     </html>`;
     return htmlTemplate;
 }
-var articleOne = {
-        title: 'Article One | Balaji S',
-        heading: 'Article One',
-        date:'Aug 22 2017',
-        content:` <p> This is article one</p>
-            <p> This is article one</p>
-            <p> This is article one</p>
-            <p> This is article one</p>`,
-        
-        };
-var articles = {
-    'article-one':{
-        title: 'Article One | Balaji S',
-        heading: 'Article One',
-        date:'Aug 22 2017',
-        id:'a1',
-        content:` <p> This is article one</p>
-            <p> This is article one</p>
-            <p> This is article one</p>
-            <p> This is article one</p>`,
-        
-        },
-    'article-two':{
-        title: 'Article Two | Balaji S',
-        heading: 'Article Two',
-        date:'Aug 23 2017',
-        id:'a2',
-        content:` <p> This is article two</p>
-                <p> This is article two</p>
-                <p> This is article two</p>
-                <p> This is article two</p>`,
-    },
-    'article-three':{
-        title: 'Article Three | Balaji S',
-        heading: 'Article Three',
-        date:'Aug 24 2017',
-        id:'a3',
-        content:` <p> This is article three</p>
-                <p> This is article three</p>
-                <p> This is article three</p>
-                <p> This is article three</p>`,
-    },
-};
+
 app.get('/articles/:articleName', function (req, res) {
  //   var articleName = req.params.articleName; 
     pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'", function(err,result){
@@ -154,7 +112,7 @@ app.get('/articles/:articleName', function (req, res) {
             res.status(500).send(err.toString());
         }
         else{
-            if (result.rows.length == 0){
+            if (result.rows.length === 0){
                 res.status(404).send('Article not found');
             }
             else{
