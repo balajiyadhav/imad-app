@@ -80,7 +80,7 @@ function createTemplate(data){
             <div class = "container">
             <div><a href="/">Home</a></div>
             <div><h1>${heading}</h1></div>
-        <div>${date.toDate()}</div>
+        <div>${date}</div>
         <div>
         ${content}
         </div>
