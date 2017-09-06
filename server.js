@@ -40,7 +40,7 @@ app.get('/test-db/:articleid', function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-            var size = Object.keys(JSON.stringify(result.rows)).length
+            var size = Object.keys(result.rows).length
             res.send(size)
         }
     });
