@@ -32,7 +32,7 @@ app.get('/ui/main.js', function (req, res) {
 });
 var pool = new Pool(config);
 app.get('/test-db/:articleid', function(req,res){
-    pool.query('SELECT * FROM comments WHERE article-id = $1',[req.params.articleid], function(err,result){
+    pool.query('SELECT * FROM comments WHERE comments.article-id = $1',[req.params.articleid], function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
