@@ -35,7 +35,7 @@ function comments(data){
     
 }
 app.get('/test-db/:articleid', function(req,res){
-    pool.query('SELECT id,comment FROM comments WHERE articleid = $1',[req.params.articleid], function(err,result){
+    pool.query('SELECT comment FROM comments WHERE articleid = $1',[req.params.articleid], function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
