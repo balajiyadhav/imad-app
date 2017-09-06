@@ -31,8 +31,8 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 var pool = new Pool(config);
-app.get('/test-db/:article_id', function(req,res){
-    pool.query('SELECT * FROM comments WHERE article-id = $1',[req.params.article_id], function(err,result){
+app.get('/test-db/:articleid', function(req,res){
+    pool.query('SELECT * FROM comments WHERE article-id = $1',[req.params.articleid], function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
