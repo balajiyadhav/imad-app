@@ -40,7 +40,7 @@ app.get('/test-db/:articleid', function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-            res.send(Object.keys(JSON.stringify(result.rows)).length)
+            res.send(JSON.stringify(result.rows))
         }
     });
 });
